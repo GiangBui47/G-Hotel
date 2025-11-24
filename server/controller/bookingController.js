@@ -2,8 +2,6 @@ import Booking from "../models/Booking.js"
 import Hotel from "../models/Hotel.js";
 import Room from "../models/Room.js";
 
-
-
 const checkAvailability = async ({ checkInDate, checkOutDate, room }) => {
     try {
         const bookings = await Booking.find({
@@ -18,7 +16,6 @@ const checkAvailability = async ({ checkInDate, checkOutDate, room }) => {
     }
 }
 
-
 // post /api/bookings/check-availability
 export const checkAvailabilityAPI = async (req, res) => {
     try {
@@ -29,7 +26,6 @@ export const checkAvailabilityAPI = async (req, res) => {
         res.json({ success: false, message: error.message })
     }
 }
-
 
 //Post /api/bookings/book
 export const createBooking = async (req, res) => {
