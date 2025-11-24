@@ -5,7 +5,7 @@ import { assets } from '../assets/assets'
 const HotelCard = ({ room, index }) => {
     return (
         <Link to={'/rooms/' + room._id} onClick={() => scrollTo(0, 0)} key={room._id} className='relative max-w-70 w-full rounded-xl
-            overflow-hidden bg-white text-gray-500/90
+            overflow-hidden bg-white text-gray-500/90 hover:scale-105 transition-all duration-300
              shadow-[0px_4px_4px_rgba(0,0,0,0.05)]'>
             <img src={room.images[0]} alt="" />
 
